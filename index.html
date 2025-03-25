@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<header>
+    <a href="#" class="logo">Samuel <span>O.</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="top-btn">
+        <a href="mailto:princeola2004@gmail.com" class="h-btn">Contact Me</a>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="main-content" data-aos="fade-in">
+        <h4>Hi, There</h4>
+        <h1>I'm <span>Samuel Oyebamiji</span></h1>
+        <h3 id="role"></h3>
+
+<script>
+  const texts = ["Data Scientist", "Data Analyst"];
+  let index = 0;
+  let textIndex = 0;
+  let currentText = texts[index];
+  let isDeleting = false;
+  let speed = 150; // Typing speed
+
+  function typeEffect() {
+    const roleElement = document.getElementById("role");
+
+    if (!isDeleting) {
+      // Typing effect
+      roleElement.textContent = currentText.substring(0, textIndex + 1);
+      textIndex++;
+
+      if (textIndex === currentText.length) {
+        isDeleting = true; 
+        setTimeout(typeEffect, 1000); // Pause before deleting
+        return;
+      }
+    } else {
+      // Deleting effect
+      roleElement.textContent = currentText.substring(0, textIndex - 1);
+      textIndex--;
+
+      if (textIndex === 5) { // Stops deleting at "Data "
+        isDeleting = false;
+        index = (index + 1) % texts.length; // Switch to next text
+        currentText = texts[index];
+      }
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+<br>
+        <div class="social">
+            <a href="https://github.com/Olatomiwa001" target="_blank"><i class="ri-github-fill"></i></a>            
+            <a href="https://www.instagram.com/ola_jesu_tomiwa/profilecard/?igsh=aXUyeWxrMDN6ZXh6" target="_blank"><i class="ri-instagram-fill"></i></a>
+            <a href="https://www.X.com/olatomiwa001" target="_blank"><i class="ri-twitter-fill"></i></a>
+            <a href="http://linkedin.com/in/samuel-oyebamiji-1303ba247" target="_blank"><i class="ri-linkedin-fill"></i></a>
+        </div>
+        <div class="main-btn">
+            <a href="mailto:princeola2004@gmail.com" class="btn">Hire Me</a>
+            <a href="oyebamiji samuel Resume.pdf" class="btn btn2" target="_blank">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-img" data-aos="zoom-in-down">
+        <img src="My pic.jpg" alt="Olajesutomiwa's photo">
+    </div>
+    <div class="about-text" data-aos="zoom-in-up">
+        <h2>About Me</h2>
+        <p>Hello! I'm Samuel Oyebamiji, a passionate and results-driven Data Scientist with hands-on experience in solving real-world problems through data. I specialize in extracting insights from complex datasets, building predictive models, and developing data-driven solutions that drive business growth.
+
+            With expertise in Python, SQL, Power BI, and machine learning frameworks, I've worked on multiple projects ranging from predictive analytics and fraud detection to market basket analysis and crop yield forecasting. My ability to transform raw data into actionable insights helps businesses optimize operations, improve decision-making, and achieve measurable success.
+            
+            Beyond technical skills, I bring a strong analytical mindset and a problem-solving approach to every project. Whether it's forecasting stock trends, detecting anomalies in financial transactions, or building NLP models to track political campaign promises, I thrive on turning data into meaningful impact.
+            
+            I'm always eager to collaborate on exciting projects, explore innovative data solutions, and share knowledge with the data community.
+            </p> <br>
+            <a href="#projects" class="btn">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="center-text" data-aos="fade-down">
+        <h2>My <span>Services</span></h2>
+    </div>
+    <div class="services-content" data-aos="zoom-in-up">
+        <div class="box">
+            <h3>Machine Learning & AI</h3>
+            <p>Building predictive models using machine learning algorithms to solve real-world problems.</p>
+        </div>
+        <div class="box">
+            <h3>Data Analysis & Insights</h3>
+            <p>Analyzing complex datasets to uncover trends, patterns, and actionable business insights.</p>
+        </div>
+        <div class="box">
+            <h3>Data Visualization & Storytelling</h3>
+            <p>Creating compelling visualizations and dashboards using Power BI, Python, and SQL.</p>
+        </div>
+        <div class="box">
+            <h3>Natural Language Processing (NLP)</h3>
+            <p>Developing AI models to process and analyze text data, including sentiment analysis and chatbots.</p>
+        </div>
+        <div class="box">
+            <h3>Big Data & Cloud Computing</h3>
+            <p>Handling large-scale datasets with cloud platforms like Google BigQuery and AWS.</p>
+        </div>
+        <div class="box">
+            <h3>End-to-End Data Science Solutions</h3>
+            <p>Designing, developing, and deploying complete data science solutions tailored to business needs.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="projects">
+    <h2>Projects</h2> <br>
+    <div class="projects-container">
+
+        <!-- Data Analysis Projects -->
+        <div class="project-item">
+            <h3>Car Sales Dashboard</h3> <br>
+            <p>Analyzed car sales trends by body style, color, and company to optimize inventory and pricing strategies using Power BI.</p><br>
+            <button onclick="toggleDetails(this)"><a href="Presentation of Car Sales Dashboard.pdf" target="_blank">View Details</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Sales Overview Dashboard</h3> <br>
+            <p>The West leads in sales and profit growth, while Central and South face profit drops. Focus on improving weaker regions and expanding strong ones.</p><br>
+            <button onclick="toggleDetails(this)"><a href="sales performance dashbord.pdf" target="_blank">View Details</a></button>
+        </div> <br> <br> <br>
+
+        <!-- Data Science Projects -->
+        <div class="project-item">
+            <h3>Customer Churn Prediction</h3> <br>
+            <p>Built a machine learning model using Logistic Regression, Random Forest, and XGBoost to predict customer churn. Identified key churn factors and developed an interactive dashboard for insights and retention strategies.</p><br>
+            <button><a href="https://telecom-customer-churn-gsusx3l9xhuutc2evfngjz.streamlit.app/" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Fake Political Campaign Promises Detector</h3> <br>
+            <p>NLP-based model to track political promises and verify fulfillment using news and government data.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Predicting Nigerian Stock Market Trends</h3> <br>
+            <p>Time series forecasting model (ARIMA, LSTM, Prophet) for stock price prediction.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Fraud Detection in Mobile Money Transactions</h3> <br>
+            <p>Built a classification model using Random Forest, XGBoost, and Isolation Forest to detect fraudulent transactions.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Market Basket Analysis for Nigerian Retailers</h3> <br>
+            <p>Used association rule mining (Apriori, FP-Growth) to identify frequently bought-together items.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Crop Yield Prediction for Nigerian Farmers</h3> <br>
+            <p>Developed a regression model (Random Forest, XGBoost, LSTMs) to predict crop yields.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div> <br> <br> <br>
+
+        <div class="project-item">
+            <h3>Loan Default Risk Prediction</h3> <br>
+            <p>Built a model to predict loan default risk using classification techniques (Logistic Regression, Random Forest, XGBoost) to assist financial institutions.</p><br>
+            <button><a href="" target="_blank">View Project</a></button>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+    <div class="center-text" data-aos="fade-down">
+        <h2>Contact <span>Me</span></h2>
+    </div>
+    <div class="contact-form" data-aos="zoom-in">
+        <form action="https://formspree.io/f/movqeeve" method="POST"> 
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address..." required>
+            <textarea name="message" cols="30" rows="10" placeholder="Write Message Here." required></textarea>
+            <input type="submit" value="Send Message" class="send-btn">
+        </form>
+    </div>
+</section>
+
+<div class="footer">
+    <div class="copyright">
+        <p>&copy; <span id="year"></span> Samuel, All Rights Reserved.</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+    <a href="#home" class="scroll-top">
+        <i class="ri-arrow-up-s-fill"></i>
+    </a>
+</div>
+
+<script src="./script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 300,
+        duration: 1400,
+    });
+</script>
+</body>
+</html>
